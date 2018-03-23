@@ -7,8 +7,8 @@ services: mysql
 
 env:
   global:
-    - DJANGO_SETTINGS_MODULE="my_site.settings"
-    - PYTHONPATH="/home/travis/build/my_github_name/my_github_project"
+    - DJANGO_SETTINGS_MODULE="mysite.settings"
+    - PYTHONPATH="/home/travis/build/malep2007/mysite"
     - PIP_USE_MIRRORS=true
     - BUILD_ON_TRAVIS=true
   matrix:
