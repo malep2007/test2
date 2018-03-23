@@ -13,5 +13,5 @@ matrix:
                                           - python3-setuptools
                                           - python3-dev
 script:
-        - python3 manage.py test polls
+        - python manage.py test polls
                          
