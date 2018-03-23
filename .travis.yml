@@ -1,10 +1,17 @@
 language: python
-virtualenv:
-        system_site_packages: true
-python:
-        - 3.6.0        
-install:
-        sudo apt-get install python3-pip
+sudo: required
+matrix:
+        include:
+                - python: "3.6"
+                  env: PYTHON_BINARY="python3.6"
+                  addons:
+                          apt:
+                                  sources:
+                                          - deadsnakes
+                                  packages:
+                                          - python3.6
+                                          - python3-setuptools
+                                          - python3-dev
 script:
-        python manage.py test
-
+        - python3 manage,py test
+                         
