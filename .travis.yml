@@ -1,8 +1,10 @@
 language: python
+virtualenv:
+        system_site_packages: true
 python:
-        -"3.6"
-env:
-        -DJANGO=2.0.3 DB=sqlite
+        - "3.6"        
+install:
+        sudo apt-get install python3-pip
 script:
-        - python manage.py test
-sudo: enabled
+        python manage.py test
+
