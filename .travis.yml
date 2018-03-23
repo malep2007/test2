@@ -1,4 +1,8 @@
-language; python
+language: python
 python:
         -"3.6"
+env:
+        -DJANGO=2.0.3 DB=sqlite
+script:
+        - python manage.py test
 sudo: enabled
